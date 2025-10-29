@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETADOL BANK - Your Future, Secured</title>
+    
+    <style>
+        /* Base Reset */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        /* Color Scheme */
+        :root {
+            --navy: #002D5B; /* Deep Blue for professionalism */
+            --gold: #C9A74A; /* Polished Gold for accent */
+            --gray-bg: #e9e9ee;
+        }
+
+        /* Header Styling */
+        .main-header {
+            background-color: var(--navy);
+            color: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky; /* Keep header visible */
+            top: 0;
+            z-index: 50;
+        }
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.95em;
+            transition: color 0.3s;
+        }
+        .main-nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn-primary { /* Secure Login button */
+            background-color: var(--gold);
+            color: var(--navy);
+        }
+        .btn-cta { /* Hero Call to Action */
+            background-color: var(--gold);
+            color: var(--navy);
+            font-size: 1.1em;
+            padding: 15px 30px;
+            margin-top: 20px;
+        }
+        .btn-primary:hover, .btn-cta:hover {
+            background-color: #e6c770;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: var(--gray-bg);
+            text-align: center;
+            padding: 100px 5%;
+            border-bottom: 5px solid var(--navy);
+        }
+        .hero-section h1 {
+            font-size: 2.5em;
+            color: var(--navy);
+            margin-bottom: 15px;
+        }
+        .hero-section p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Offerings Section (Cards) */
+        .offerings-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 5%;
+            background-color: white;
+        }
+        .card {
+            flex-basis: 30%;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-top: 4px solid var(--gold);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px); /* subtle hover effect */
+        }
+        .card h3 {
+            color: var(--navy);
+            margin-top: 0;
+        }
+
+        /* Footer Styling */
+        .main-footer {
+            background-color: #222;
+            color: #bbb;
+            padding: 20px 5%;
+            text-align: center;
+            font-size: 0.85em;
+        }
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        /* Cookie Popup Styling */
+        .cookie-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+            max-width: 350px;
+            display: none; /* JavaScript controls visibility */
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+        .cookie-popup button {
+            background-color: var(--gold);
+            color: var(--navy);
+            border: none;
+            padding: 8px 15px;
+            margin-left: 15px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+            flex-shrink: 0; /* Prevents button from shrinking on small screens */
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">NETADOL BANK</div>
+        <nav class="main-nav">
+            <a href="#personal">Personal Banking</a>
+            <a href="#business">Business</a>
+            <a href="#wealth">Wealth Management</a>
+            <a href="#about">About Us</a>
+        </nav>
+        <a href="#login" class="btn btn-primary">Secure Login</a>
+    </header>
+
+    <section class="hero-section">
+        <h1>Your Financial Future. Built on Stability and Advanced Technology.</h1>
+        <p>Explore our tailored financial products designed for stability and growth.</p>
+        <a href="#open" class="btn btn-cta">Open an Account Today</a>
+    </section>
+
+    <section class="offerings-section">
+        <div class="card">
+            <h3>Digital Banking</h3>
+            <p>24/7 access to your accounts, transfers, and bill pay, all secured by industry-leading technology.</p>
+        </div>
+        <div class="card">
+            <h3>Mortgages & Loans</h3>
+            <p>Competitive rates and expert guidance for homeownership and large purchases.</p>
+        </div>
+        <div class="card">
+            <h3>Security & Trust</h3>
+            <p>Your assets are protected by advanced encryption (**Python** Back-End Logic) and fraud monitoring.</p>
+        </div>
+    </section>
+    
+    <section style="padding: 50px 5%; text-align: center; background-color: var(--gray-bg);">
+        <h2>Industry-Leading Rates and Insights</h2>
+        <p style="color: var(--navy);">**Data would be dynamically loaded via JavaScript from a secure Python API.**</p>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a> |
+            <a href="#terms">Terms & Conditions</a> |
+            <a href="#security">Security Center</a> |
+            <a href="#contact">Contact Us</a>
+        </div>
+        <p style="margin-top: 10px;">&copy; 2025 NETADOL BANK. All Rights Reserved. Member FDIC/FSCS.</p>
+    </footer>
+
+    <div id="cookie-consent-popup" class="cookie-popup">
+        <p>🍪 **Privacy Notice:** We use cookies for security and analytics.</p>
+        <button id="accept-cookies" onclick="acceptCookies()">Accept All Cookies</button>
+    </div>
+
+    <script>
+        // Function to show the cookie banner if not already accepted
+        function showCookieBanner() {
+            // Check if the user has a local storage item indicating acceptance
+            if (!localStorage.getItem('netadolCookiesAccepted')) {
+                const popup = document.getElementById('cookie-consent-popup');
+                if (popup) {
+                    // Display the popup using 'flex' as set in CSS
+                    popup.style.display = 'flex';
+                }
+            }
+        }
+
+        // Function to handle the acceptance button click
+        function acceptCookies() {
+            // Set the local storage item to 'true'
+            localStorage.setItem('netadolCookiesAccepted', 'true');
+            
+            // Hide the popup
+            const popup = document.getElementById('cookie-consent-popup');
+            if (popup) {
+                popup.style.display = 'none';
+            }
+
+            // NOTE: In a real website, this is where you would load non-essential 
+            // tracking or analytics scripts after consent is given.
+            console.log("Cookies accepted.");
+        }
+
+        // Automatically execute the function when the entire page is loaded
+        window.onload = showCookieBanner;
+    </script>
+</body>
+</html>
